@@ -18,7 +18,7 @@ const AddFactureForm = ({ clientId, onFactureAdded, onCancel }) => {
     console.log("Données envoyées:", factureData);
     
     axios.post(
-      'http://localhost/gestion_clients_php/addFacture.php',
+      'http://localhost/projet_stage/gestion_clients_php/addFacture.php',
       JSON.stringify(factureData),
       {
         headers: {

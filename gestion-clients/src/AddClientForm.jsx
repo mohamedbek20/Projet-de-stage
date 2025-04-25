@@ -68,7 +68,7 @@ const AddClientForm = ({ onClientAdded, onCancel }) => {
     
     console.log('Envoi des données:', formData);
 
-    axios.post('http://localhost/gestion_clients_php/addClient.php', formData, {
+    axios.post('http://localhost/projet_stage/gestion_clients_php/addClient.php', formData, {
       headers: {
         'Content-Type': 'application/json'
       }

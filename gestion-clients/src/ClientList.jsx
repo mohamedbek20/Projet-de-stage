@@ -123,7 +123,7 @@ const ClientList = ({ clients = [], onSelectClient, onClientUpdated, onDeleteCli
     }
 
     try {
-      const response = await fetch('http://localhost/gestion_clients_php/modifierClient.php', {
+      const response = await fetch('http://localhost/projet_stage/gestion_clients_php/modifierClient.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -181,7 +181,7 @@ const ClientList = ({ clients = [], onSelectClient, onClientUpdated, onDeleteCli
 
   const handleConfirmDelete = () => {
     const id = deleteConfirmation.clientId;
-    axios.delete(`http://localhost/gestion_clients_php/supprimerClient.php?id=${id}`)
+    axios.delete(`http://localhost/projet_stage/gestion_clients_php/supprimerClient.php?id=${id}`)
       .then(response => {
         if (response.data.success) {
           if (selectedClientId === id) {

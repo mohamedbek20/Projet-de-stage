@@ -26,7 +26,7 @@ const ModifierFactureForm = ({ facture, onFactureUpdated }) => {
 
     console.log("Données envoyées:", dataToSend);
 
-    axios.post('http://localhost/gestion_clients_php/modifierFacture.php', dataToSend)
+    axios.post('http://localhost/projet_stage/gestion_clients_php/modifierFacture.php', dataToSend)
     .then(response => {
       console.log('Réponse serveur:', response.data);
 

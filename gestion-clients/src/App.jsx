@@ -13,7 +13,7 @@ const App = () => {
   const [showAddClientForm, setShowAddClientForm] = useState(false);
 
   const fetchClients = () => {
-    axios.get('http://localhost/gestion_clients_php/getClients.php')
+    axios.get('http://localhost/projet_stage/gestion_clients_php/getClients.php')
       .then(response => {
         if (response.data.success && Array.isArray(response.data.clients)) {
           setClients(response.data.clients);
@@ -29,7 +29,7 @@ const App = () => {
   };
 
   const fetchFactures = (clientId) => {
-    axios.get(`http://localhost/gestion_clients_php/getFactures.php?client_id=${clientId}`)
+    axios.get(`http://localhost/projet_stage/gestion_clients_php/getFactures.php?client_id=${clientId}`)
       .then(response => setFactures(response.data))
       .catch(error => console.error(error));
   };  
@@ -56,7 +56,7 @@ const App = () => {
   };
 
   const handleDeleteClient = (id) => {
-    axios.delete(`http://localhost/gestion_clients_php/supprimerClient.php?id=${id}`)
+    axios.delete(`http://localhost/projet_stage/gestion_clients_php/supprimerClient.php?id=${id}`)
       .then(response => {
         console.log(response.data);
         fetchClients(); 

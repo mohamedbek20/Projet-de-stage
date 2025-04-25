@@ -5,7 +5,7 @@ const MarquerPayerFacture = ({ factureId, onFactureUpdated }) => {
   const handleMarquerPayer = (e) => {
     e.preventDefault();
     
-    axios.post('http://localhost/gestion_clients_php/marquerPayerFacture.php', {
+    axios.post('http://localhost/projet_stage/gestion_clients_php/marquerPayerFacture.php', {
       id: factureId,
     })
     .then((response) => {

@@ -40,7 +40,7 @@ const FactureList = ({ factures, onFactureUpdated, clientId }) => {
 
   const handleConfirmDelete = () => {
     const factureId = deleteConfirmation.factureId;
-    axios.get(`http://localhost/gestion_clients_php/supprimerFacture.php?id=${factureId}`)
+    axios.get(`http://localhost/projet_stage/gestion_clients_php/supprimerFacture.php?id=${factureId}`)
       .then(() => {
         onFactureUpdated();
       })
@@ -113,7 +113,7 @@ const FactureList = ({ factures, onFactureUpdated, clientId }) => {
         status: formData.status
       };
 
-      await axios.post('http://localhost/gestion_clients_php/modifierFacture.php', dataToSend);
+      await axios.post('http://localhost/projet_stage/gestion_clients_php/modifierFacture.php', dataToSend);
       setEditingFacture(null);
       setFormData({
         description: '',
